@@ -13,7 +13,7 @@ var contexts = [];
 function sconf(conf, development, test, production){
   if(_.isString(conf)){
     var prefix = contexts.join('_');
-    var val = env[prefix ? +'_'+conf : conf];
+    var val = env[prefix ? prefix+'_'+conf : conf];
     var extra;
     switch(nodeMode){
       case 'development':
