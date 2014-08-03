@@ -3,7 +3,14 @@ sconf
 
 Simple Configuration for NodeJS Applications.
 
-Follows the twelve-factor app [guidelines](http://www.12factor.net/config).
+Why?
+====
+
+Because you need a well defined metodology to configure your applications both for
+development and deployment instead of reinventing the wheel for every application
+or hacking configuration values.
+
+*sconf* follows the twelve-factor app [guidelines](http://www.12factor.net/config).
 
 You should define the application configuration by setting environment variables, 
 but you can have convenient defaults for development, testing or some special
