@@ -26,12 +26,16 @@ function sconf(conf, development, test, production){
         extra = production
         break;
     }
-    val = val || extra || development || test || production;
+    val = val || extra || development || test || production || '';
     
     if(_.isString(val) && validUrl.isUri(val)){
       return url.parse(val);
     }else{
-      return val;
+      switch(val){
+        case 'true': return true;
+        case 'false': return false;
+        default: return val;
+      }
     }
   } else{
     if(contexts.length){
