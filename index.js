@@ -26,8 +26,10 @@ function sconf(conf, development, test, production){
         extra = production
         break;
     }
-    val = val || extra || development || test || production || '';
-    
+    if(_.isUndefined(val)){
+      val = extra || development || test || production || '';  
+    }
+
     if(_.isString(val) && validUrl.isUri(val)){
       return url.parse(val);
     }else{
