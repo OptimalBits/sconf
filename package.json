@@ -1,6 +1,6 @@
 {
   "name": "sconf",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Simple Configuration for NodeJS Applications",
   "main": "index.js",
   "scripts": {
